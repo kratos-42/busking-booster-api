@@ -1,0 +1,99 @@
+{
+  "keywords": [
+    "busking"
+  ],
+  "author": "Daniel Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kratos-42/busking-booster-api/issues"
+  },
+  "homepage": "https://github.com/kratos-42/busking-booster-api#readme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kratos-42/busking-booster-api.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist --extensions '.ts'",
+    "coverage": "jest --coverage",
+    "lint": "eslint . --ext '.ts'",
+    "lint-staged": "lint-staged",
+    "start": "node src/index.js",
+    "test": "jest --forceExit",
+    "tsc": "tsc",
+    "watch": "babel --watch src --out-dir lib --extensions '.ts'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "yarn run lint"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-typescript": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@types/config": "^0.0.36",
+    "@types/got": "^9.6.9",
+    "@types/jest": "^25.1.2",
+    "@types/koa": "^2.11.0",
+    "@types/koa-router": "^7.4.0",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.4",
+    "@types/node": "^13.7.0",
+    "config": "^3.2.5",
+    "got": "^10.5.5",
+    "husky": "^4.2.1",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.7",
+    "lint-staged": "^10.0.7",
+    "micromatch": "^4.0.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov",
+      "text"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "moduleNameMapper": {
+      "^src/(.*)": "<rootDir>/src/$1",
+      "^test/(.*)$": "<rootDir>/test/$1"
+    },
+    "preset": "ts-jest",
+    "testRegex": "(test/.*\\.test.ts)$",
+    "transform": {
+      ".ts": "ts-jest"
+    }
+  }
+}

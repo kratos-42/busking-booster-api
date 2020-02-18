@@ -14,16 +14,21 @@
     project: './tsconfig.json',
     tsconfigRootDir: __dirname
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'sort-imports-es6'],
   root: true,
   rules: {
-    '@typescript-eslint/indent': ['error', 2],
     'no-multiple-empty-lines': ['error', {
       max: 1,
       maxEOF: 0
     }],
     'no-console': 'error',
-    'no-empty': 'error'
+    'no-empty': 'error',
+    'sort-keys': 'error',
+    'sort-imports-es6/sort-imports-es6': ['error', {
+      ignoreCase: false,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+    }],
   },
   settings: {
     'import/parsers': {

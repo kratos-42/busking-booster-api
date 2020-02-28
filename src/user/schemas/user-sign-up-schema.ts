@@ -9,5 +9,6 @@ export default {
       pattern: '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[_!@#\\$%\\^&\\*])(?=.{8,})',
       type: 'string'
     }
-  }
-}
+  },
+  required: ['email', 'password']
+};

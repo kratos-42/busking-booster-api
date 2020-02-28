@@ -1,4 +1,4 @@
-import { Request } from "koa"
+import { Request } from 'koa';
 
 export interface SignUpRequest extends Request {
   email: string;

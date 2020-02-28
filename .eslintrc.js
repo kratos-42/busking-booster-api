@@ -1,13 +1,14 @@
  module.exports = {
   env: {
     browser: 1,
+    es6: 1,
     node: 1
   },
   extends: [
-    'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'seegno'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,18 +18,7 @@
   plugins: ['@typescript-eslint', 'sort-imports-es6'],
   root: true,
   rules: {
-    'no-multiple-empty-lines': ['error', {
-      max: 1,
-      maxEOF: 0
-    }],
-    'no-console': 'error',
-    'no-empty': 'error',
-    'sort-keys': 'error',
-    'sort-imports-es6/sort-imports-es6': ['error', {
-      ignoreCase: false,
-      ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
-    }],
+    'no-console': 'error'
   },
   settings: {
     'import/parsers': {

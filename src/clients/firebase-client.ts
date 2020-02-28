@@ -2,7 +2,7 @@ import { UserSignUp } from 'types/user';
 import firebase from 'firebase-admin';
 
 class FirebaseClient {
-  
+
   client: firebase.app.App;
 
   constructor() {
@@ -20,11 +20,12 @@ class FirebaseClient {
       return this.client.auth().createUser({
         email,
         password
-      })
+      });
     } catch (error) {
-      throw new Error();      
+      throw new Error();
     }
   }
+
 }
 
 export default new FirebaseClient();
